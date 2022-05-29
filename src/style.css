@@ -1,0 +1,333 @@
+/*Importação de Fontes*/
+
+@font-face {
+    font-family: 'Gotham';
+    src: url(../assets/fonts/GothamMedium.ttf);
+}
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url(../assets/fonts/GothamLight.ttf);
+}
+
+/*Configurações Globais*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gotham';
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+button{
+    padding: 16px 32px 18px;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.05) perspective(1px);
+}
+
+/*Cabeçalho*/
+header{
+    background-color: #000;
+    padding: 18px 180px;
+    position: relative;
+}
+
+.spotify-logo{
+    display: inline-block;
+}
+
+.spotify-logo svg{
+    fill: #fff;
+    height: 42px;
+}
+
+header nav{
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+header nav span{
+    font-family: "Gotham-Light";
+    font-weight: 100;
+}
+
+header nav ul li{
+    color: #fff;
+    display: inline-block;
+    margin: auto 20px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+header nav ul li:hover{
+    color: #1ED760;
+}
+header nav ul li:hover svg{
+    fill: #1ED760;
+}
+
+
+/*Main Content*/
+
+/*Section 01*/
+#seja-premium{
+    background-color: #ffcdd2;
+    padding: 175px 80px;
+    text-align: center;
+}
+
+#seja-premium h1, #seja-premium button, #seja-premium p{
+    margin-top: 35px;
+}
+
+#seja-premium h1, #seja-premium p{
+    color: #D83519;
+}
+
+#seja-premium h1{
+    font-size: 80px;
+}
+
+#seja-premium button{
+    color: #fff;
+    background-color: #D83519;
+    
+}
+
+#seja-premium button:hover{
+    background-color: #C12F16;
+}
+
+#seja-premium p{
+    font-size: 12px;
+    font-family: "Gotham-Light";
+    font-weight: bold;
+}
+
+#seja-premium h1, button, p{
+    margin-top: 35px;
+}
+
+/*Section 02*/
+#web-player{
+    padding: 140px 180px;
+    background-color: #2941AB;
+    background-image: url(../assets/images/web-player-background.svg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+#web-player h1, #web-player h2{
+    color: #1ED760;
+}
+
+#web-player h1{
+    font-size: 52px;
+}
+
+#web-player h2{
+    font-family: "Gotham-Light";
+    font-size: 22px;
+}
+
+#web-player button{
+    background-color: #1ED760;
+    color: #2941AB;
+}
+
+.mt-medium{
+    margin-top: 60px;
+}
+
+footer{
+    background-color: #000;
+    padding: 80px 160px;
+}
+
+footer nav{
+    position: relative;
+}
+
+/*Parte superior do rodapé*/
+#top-footer div{
+    display: inline-block;
+}
+
+/*Div contendo a logo do spotify*/
+#footer-logo{
+    float: left;
+    margin-right: 50px;
+}
+
+/*Div das listas que linkam o usuário às outras páginas do site*/
+#footer-links {
+    margin-top: 20px;
+}
+
+.links-column{
+    vertical-align: text-top;
+    margin: 0 42px;
+    float: left;
+}
+
+.links-column *{
+    margin-bottom: 24px;
+}
+
+.links-column h3{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #919496;
+    margin-bottom: 32px;
+}
+
+.links-column a{
+    font-size: 14px;
+    color: white;
+}
+
+.links-column a:hover{
+    color: #1ED760;
+}
+
+
+/*Div dos ícones  de redes sociais*/
+#footer-social{
+    color: #fff;
+    float: right;
+}
+
+#footer-social ul li{
+    display: inline-block;
+}
+
+.social-icon{
+    background-color: #222326;
+    padding: 12px;
+    border-radius: 50%;
+    margin: auto 6px;
+}
+
+.social-icon svg{
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    fill: #fff;
+}
+
+.social-icon svg:hover{
+    fill: #1ED760;
+}
+
+/*Parte inferior do rodapé*/
+#bottom-footer{
+    font-family: "Gotham-Light";
+    margin-top: 80px;
+}
+
+#legal-links{
+    float: left;
+}
+
+#legal-links a{
+    font-weight: 600;
+    font-size: 11px;
+    color:#919496;
+    margin: 0 10px;
+}
+
+#legal-links a:hover{
+    color: #1ED760;
+}
+
+#copyright{
+    float: right;
+}
+
+#copyright a{
+    font-weight: 100;
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    margin-bottom: 16px;
+    color:#919496
+}
+
+#copyright a:hover{
+    color: #1ED760;
+}
+
+/*Extra - Header Profile*/
+header nav img{
+    border-radius: 50%;
+    height: 42px;
+    vertical-align: middle;
+    margin: auto 10px;
+}
+
+header nav span{
+    color: #fff;
+}
+
+header nav svg{
+    fill: #fff;
+    height: 12px;
+}
+
+
+/*Dropdown Box*/
+
+#dropdown-button{
+    cursor: pointer;
+}
+
+#profile-dropdown {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: #fff;
+    min-width: 160px;
+    overflow: auto;
+    border-radius: 2px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    display: none;
+}
+
+#profile-dropdown a li{
+    display: block;
+    color: #919496;
+    padding: 12px 0;
+    margin-left: 16px;
+}
+
+#profile-dropdown a:first-of-type li{
+    color: #000;
+}
+
+#profile-dropdown a li:hover{
+    color: #1ED760;
+}
+
+.show{
+    display: block!important;
+}
