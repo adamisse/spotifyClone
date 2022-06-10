@@ -159,7 +159,7 @@ header nav ul li:hover svg{
 
 footer{
     background-color: #000;
-    padding: 80px 160px;
+    padding: 80px 100px;
 }
 
 footer nav{
@@ -167,6 +167,11 @@ footer nav{
 }
 
 /*Parte superior do rodapé*/
+
+#top-footer{
+    text-align: center;
+}
+
 #top-footer div{
     display: inline-block;
 }
@@ -174,12 +179,15 @@ footer nav{
 /*Div contendo a logo do spotify*/
 #footer-logo{
     float: left;
-    margin-right: 50px;
+    margin-left: 0px;
 }
 
 /*Div das listas que linkam o usuário às outras páginas do site*/
 #footer-links {
-    margin-top: 20px;
+    font-family: "Gotham-Light";
+    font-weight: 100;
+    margin-left: 20px auto;
+    text-align: left;
 }
 
 .links-column{
