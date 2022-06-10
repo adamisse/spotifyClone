@@ -5,12 +5,212 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://www.scdn.co/i/_global/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Escutar muda tudo - Spotify</title>
 </head>
 
 <style>
+    body{
+        font-size: 1rem;
+    }
+    
+    header{
+        background-color: #000;
+        padding: 20px;
 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    header nav{
+        position: relative; /*Parar poder posicionar o dropdown*/
+    }
+
+    header nav ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .menu-toggle{
+        display: none;
+        background-color: #555;
+        color: #fff;
+        border: 1px solid #777;
+        border-radius: 5px;
+        height: 40px;
+        padding: 10px 20px;
+    }
+
+    @media(max-width: 1280px){
+        header{
+            justify-content: space-between;
+        }
+        header nav {
+            display: none;
+        }
+        .menu-toggle {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    #seja-premium{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 75vh;
+        font-size: 3rem;
+    }
+
+    #seja-premium h1, #seja-premium button, #seja-premium p{
+        margin: 20px auto;
+    }
+
+    @media(max-width: 1280px){
+        #seja-premium{
+            height: 40vh;
+        }
+
+        #seja-premium h1{
+            font-size: 2rem;
+        }
+
+        #seja-premium p{
+            font-size: 0.5rem;
+            padding: 0 20px;
+        }
+
+        #seja-premium button{
+            font-size: 0.5rem;
+            padding: 15px;
+        }
+    }
+
+    #web-player{
+        height: 75vh;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 200px;
+    }
+
+    #web-player h1{
+        font-size: 3rem;
+    }
+
+    #web-player h2{
+        font-size: 1.5rem;
+    }
+
+    @media(max-width: 1280px){
+        #web-player{
+            background-image: none;
+            background-color: #2941AB;
+            height: 40vh;
+            align-items: center;
+            padding: 0 30px;
+        }
+        #web-player h1{
+            font-size: 2rem;
+            padding: 0;
+        }
+
+        #web-player h2{
+            font-size: 1rem;
+        }
+
+        #web-player button{
+            font-size: 0.5rem;
+            padding: 15px;
+        }
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #top-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #footer-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #bottom-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #copyright{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    @media(max-width: 1280px){
+        footer{
+            padding: 15px 50px;
+        }
+
+        footer div{
+            margin: 20px auto;
+        }
+
+        #top-footer{
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #footer-links{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .links-column{
+            margin: 20px auto;
+        }
+
+        #bottom-footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #legal-links{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #legal-links a {
+            padding: 10px;
+        }
+
+        #copyright{
+            text-align: center;
+            align-items: center;
+        }
+    }
 </style>
 
 <body>
@@ -29,7 +229,7 @@
                 <span>|</span>
                 <a id="dropdown-button" onclick="dropdownProfileMenu()">
                     <li>
-                        <img src="../assets/images/leao-alex.jpg" alt="Leão Alex">
+                        <img src="../assets/images/stock-user.jpeg" alt="Foto do Usuário logado">
                         Perfil
                         <svg viewBox="0 0 1024 1024" class="svelte-13ynk3t"><path d="M476.455 806.696L95.291 425.532Q80.67 410.911 80.67 390.239t14.621-34.789 35.293-14.117 34.789 14.117L508.219 698.8l349.4-349.4q14.621-14.117 35.293-14.117t34.789 14.117 14.117 34.789-14.117 34.789L546.537 800.142q-19.159 19.159-38.318 19.159t-31.764-12.605z"></path>
                         </svg>
@@ -43,6 +243,10 @@
                 </div>
             </ul>
         </nav>
+
+        <div class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </div>
     </header>
 
     <main>
